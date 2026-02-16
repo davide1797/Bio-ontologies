@@ -1,0 +1,801 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo"
+     xml:base="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oae="http://www.mistea.supagro.inra.fr/ontologies/2015/oae"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ofpe="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo">
+        <owl:versionIRI rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo"/>
+        <owl:imports rdf:resource="http://opensilex.org/vocabulary/2016/v4/aeo.owl"/>
+        <owl:imports rdf:resource="http://opensilex.org/vocabulary/2016/v4/ofpe.owl"/>
+        <dc:creator xml:lang="en">Aunur-Rofiq MULJARTO,  Jean-Michel SALMON, Brigitte CHARNOMORDIC, Patrice BUCH, Anne TIREAU, Pascal NEVEU</dc:creator>
+        <dc:description xml:lang="en">The Agri-Food Experiment Ontology (AFEO), a new ontology network was developed based on two existing ontology resources, i.e., OAE (Ontology for Agriculture Experiment) and OFPE (Ontology for Food Processing Experiment).</dc:description>
+        <dc:language xml:lang="en">http://www.lexvo.org/page/iso639-3/eng</dc:language>
+        <dc:publisher xml:lang="en">INRA MISTEA, SPO, IATE
+Copyright © - INRA - 2014 - 2022</dc:publisher>
+        <dc:rights xml:lang="en">http://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+        <dc:title xml:lang="en">Agri-Food Experiment Ontology
+(AFEO),</dc:title>
+        <rdfs:comment xml:lang="en">INRA MISTEA, SPO, IATE
+Copyright © - INRA - 2014 - 2022
+The Ontology for Agricultural Experiments is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</rdfs:comment>
+        <owl:versionInfo xml:lang="en">4.2 May 2022
+change import</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#before -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#before">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasAttribute">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriActivity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriEntity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasInput">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasObservedObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasObservedObject">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriActivity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriEntity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#hasOutput">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isInputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isInputOf">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isObservedObjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isObservedObjectOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriActivity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriEntity"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#isOutputOf">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+                    <rdf:Description rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriActivity -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriActivity"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriEntity -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/aeo#AgriEntity"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2015/oae#Harvesting"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Ageing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Ageing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BiochemicalOperation"/>
+        <rdfs:label xml:lang="en">ageing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#AlcoholicFermentation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#AlcoholicFermentation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Fermentation"/>
+        <rdfs:label xml:lang="en">Alcoholic Fermentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BacteriaAddition -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BacteriaAddition">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bacterium -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bacterium">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Bacterium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bentonite -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bentonite">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Bentonite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Berry -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Berry">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#InputProduct"/>
+        <rdfs:label xml:lang="en">Berry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BiochemicalOperation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BiochemicalOperation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+        <rdfs:label xml:lang="en">biochemical operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bottling -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Bottling">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Packaging"/>
+        <rdfs:label xml:lang="en">Bottling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#CarbonicMaceration -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#CarbonicMaceration">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration"/>
+        <rdfs:label xml:lang="en">Carbonic Maceration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Clarification -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Clarification">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Separation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Cleaning -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Cleaning">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation"/>
+        <rdfs:label xml:lang="en">Cleaning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#ColdMaceration -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#ColdMaceration">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration"/>
+        <rdfs:label xml:lang="en">Cold Maceration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Concentrate -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Concentrate">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Concentrate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#ConventionalMaceration -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#ConventionalMaceration">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration"/>
+        <rdfs:label xml:lang="en">Conventional Maceration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Crushing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Crushing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+        <rdfs:label xml:lang="en">Crushing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#CubePackaging -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#CubePackaging">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Packaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Destemming -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Destemming">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Destemming</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#DirectPressing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#DirectPressing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pressing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Draining -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Draining">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Draining</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Dripping -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Dripping">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Dripping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Enzyme -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Enzyme">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Enzyme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#EnzymeAddition -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#EnzymeAddition">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+        <rdfs:label xml:lang="en">Enzyme Addition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Fermentation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Fermentation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#BiochemicalOperation"/>
+        <rdfs:label xml:lang="en">Fermentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#CoreProduct"/>
+        <rdfs:label xml:lang="en">Finished Wine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FreeRun-Juice -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FreeRun-Juice">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct"/>
+        <rdfs:label xml:lang="en">Free Run-Juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Grading -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Grading">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation"/>
+        <rdfs:label xml:lang="en">Grading</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Grappe -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Grappe">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#InputProduct"/>
+        <rdfs:label xml:lang="en">Grappe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#HeatProcessing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#HeatProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#HotMaceration -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#HotMaceration">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration"/>
+        <rdfs:label xml:lang="en">Hot Maceration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Maceration">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Maceration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#MalolacticFermentation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#MalolacticFermentation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Fermentation"/>
+        <rdfs:label xml:lang="en">Malolactic Fermentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+        <rdfs:label xml:lang="en">Mixing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct"/>
+        <rdfs:label xml:lang="en">Must</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must-AF -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must-AF">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct"/>
+        <rdfs:label xml:lang="en">Must-AF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Nitrogen -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Nitrogen">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Nitrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#NitrogenAddition -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#NitrogenAddition">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+        <rdfs:label xml:lang="en">Nitrogen Addition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#OtherAdditives -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#OtherAdditives">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Other Additives</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Packaging -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Packaging">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PostOperation"/>
+        <rdfs:label xml:lang="en">Packaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pomace -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pomace">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ByProduct"/>
+        <rdfs:label xml:lang="en">Pomace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Press-Juice -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Press-Juice">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct"/>
+        <rdfs:label xml:lang="en">Press-Juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pressing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pressing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Pressing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#PumpingOver -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#PumpingOver">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+        <rdfs:label xml:lang="en">Pumping Over</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Racking -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Racking">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation"/>
+        <rdfs:label xml:lang="en">Racking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RedWine -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RedWine">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine"/>
+        <rdfs:label xml:lang="en">Red Wine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RedWinePressing -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RedWinePressing">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Pressing"/>
+        <rdfs:label xml:lang="en">Red Wine Pressing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RoseWine -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#RoseWine">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine"/>
+        <rdfs:label xml:lang="en">Rose Wine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Separation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sorting -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sorting">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation"/>
+        <rdfs:label xml:lang="en">Sorting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Stem -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Stem">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ByProduct"/>
+        <rdfs:label xml:lang="en">Stem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sulfitation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sulfitation">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+        <rdfs:label xml:lang="en">Sulfitation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sulphur -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Sulphur">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Sulphur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#TemporaryStorage -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#TemporaryStorage">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation"/>
+        <rdfs:label xml:lang="en">Temporary Storage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#WhiteWine -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#WhiteWine">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine"/>
+        <rdfs:label xml:lang="en">White Wine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Yeast -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Yeast">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+        <rdfs:label xml:lang="en">Yeast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#YeastAddition -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#YeastAddition">
+        <rdfs:subClassOf rdf:resource="http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Mixing"/>
+        <rdfs:label xml:lang="en">Yeast Addition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ByProduct -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ByProduct"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#CoreProduct -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#CoreProduct"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#InputProduct -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#InputProduct"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#IntermediateProduct"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#MainOperation"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Operation"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PostOperation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PostOperation"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#PreliminaryOperation"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Product -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#Product"/>
+    
+
+
+    <!-- http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct -->
+
+    <owl:Class rdf:about="http://www.mistea.supagro.inra.fr/ontologies/2016/v4/ontofp#ServiceProduct"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
